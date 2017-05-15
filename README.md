@@ -3,10 +3,8 @@
 Deployed at: https://pet-match.herokuapp.com/
 
 TODO:
-
-  frontend:
-  
-    login page logic
+  *frontend:
+    *login page logic
     
     register page
     
