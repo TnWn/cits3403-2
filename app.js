@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongo = require('mongodb').MongoClient;
 
 var index = require('./routes/index');
 var about = require('./routes/about');
@@ -11,6 +12,12 @@ var login = require('./routes/login');
 var register = require('./routes/register');
 
 var app = express();
+
+// MongoDB setup
+mongo.connect('mongodb://admin:password@ds143081.mlab.com:43081/cits3403-project', function(err, db) {
+    if(err) throw err
+})
+    
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
