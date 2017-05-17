@@ -15,6 +15,7 @@ TODO:
       the way.
     * one page describing the test and validation strategy and results.
     * one page giving short bios of yourself, and any references used.
+  * favicons? (if we have time) 
 * backend:
   * Login/Register 
     * for dogs/pounds and humans?
