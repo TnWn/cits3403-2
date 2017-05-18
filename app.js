@@ -14,8 +14,9 @@ var register = require('./routes/register');
 var app = express();
 
 // MongoDB setup
-mongo.connect('mongodb://admin:password@ds143081.mlab.com:43081/cits3403-project', function(err, db) {
+mongo.connect('mongodb://admin:password@ds143081.mlab.com:43081/cits3403-project', function(err, database) {
     if(err) throw err
+    db = database
 })
     
 
@@ -36,6 +37,16 @@ app.use('/about', about);
 app.use('/login', login);
 app.use('/register', register);
 
+// Add new user to MongoDB from the register page
+app.post('/register', function(req, res) {
+    db.collection('users').save(req.body, function(err) {
+        if(err) throw err
+        
+        console.log('saved to database')
+        res.redirect('/')
+    })
+})
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -53,5 +64,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.listen(3000)
 
 module.exports = app;
