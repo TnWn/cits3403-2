@@ -179,6 +179,7 @@ p.copyright {
     margin: 15px 0 0;
 }
 
+/* Form Formatting */
 div#form-wrapper {
     position:absolute;
     top:15%;
@@ -193,7 +194,6 @@ div#form-wrapper {
     background-color: rgba(255,255,255,0.5);
     padding: 0px 10px 10px 10px;
 }
-
 
 form > h2 {
     color: #f8f8f8;
