@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>WEBSITE NAME - Register</title>
+    <title>WEBSITE NAME - Matches</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -30,7 +30,7 @@
 
 </head>
 
-<body background="../images/login-bg.jpg" >
+<body class="bodyBackgroundColor">
 
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
@@ -46,63 +46,19 @@
             <a class="navbar-brand topnav" href="/">Home</a>
             <a class="navbar-brand topnav" href="/about">About</a>
         </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/user">User</a>
+                </li>
+                <li>
+                    <a href="/matches">Matches</a>
+                </li>
+            </ul>
+        </div>
     </div>
     <!-- /.container -->
 </nav>
-
-<div class="container">
-    <div id="form-wrapper">
-        <form action="/register" method="POST">
-            <h1>Register</h1>
-            <input type="text" name="firstName" placeholder="First Name">
-            <input type="text" name="lastName" placeholder="Last Name" >
-            <input type="text" name = "email" placeholder="Email">
-            <input type="password" name="password" placeholder="Password">
-    
-            <h4>Enter Matching Data</h4>
-    
-            How would you rate your energy levels out of 5?<br>
-            1
-            <input type="radio" id="Energy1" name="energy" value="1">
-            <input type="radio" id="Energy2" name="energy" value="2">
-            <input type="radio" id="Energy3" name="energy" value="3">
-            <input type="radio" id="Energy4" name="energy" value="4">
-            <input type="radio" id="Energy5" name="energy" value="5">
-            5
-            <br>
-            How would you rate your confidence out of 5?<br>
-            1
-            <input type="radio" id="Confidence1" name="confidence" value="1">
-            <input type="radio" id="Confidence2" name="confidence" value="2">
-            <input type="radio" id="Confidence3" name="confidence" value="3">
-            <input type="radio" id="Confidence4" name="confidence" value="4">
-            <input type="radio" id="Confidence5" name="confidence" value="5">
-            5
-            <br>
-            How would you rate your focus of of 5?<br>
-            1
-            <input type="radio" id="Focus1" name="focus" value="1">
-            <input type="radio" id="Focus2" name="focus" value="2">
-            <input type="radio" id="Focus3" name="focus" value="3">
-            <input type="radio" id="Focus4" name="focus" value="4">
-            <input type="radio" id="Focus5" name="focus" value="5">
-            5
-            <br>
-            How would you rate your independence out of 5?<br>
-            1
-            <input type="radio" id="Independence1" name="independence" value="1">
-            <input type="radio" id="Independence2" name="independence" value="2">
-            <input type="radio" id="Independence3" name="independence" value="3">
-            <input type="radio" id="Independence4" name="independence" value="4">
-            <input type="radio" id="Independence5" name="independence" value="5">
-            5
-            <br><br>
-            <input type="submit" value="Submit">
-
-    </form>
-
-    </div>
-</div>
 
 <!-- Footer -->
 <footerFixed>
