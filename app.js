@@ -10,6 +10,9 @@ var index = require('./routes/index');
 var about = require('./routes/about');
 var login = require('./routes/login');
 var register = require('./routes/register');
+var user = require('./routes/user');
+var matches = require('./routes/matches');
+
 
 var app = express();
 
@@ -34,6 +37,8 @@ app.use('/', index);
 app.use('/about', about);
 app.use('/login', login);
 app.use('/register', register);
+app.use('/user', user);
+app.use('/matches', matches);
 
 // Add new user to MongoDB from the register page
 app.post('/register', function(req, res) {
@@ -62,8 +67,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-//app.listen(3000) leads to nodemon errors?
-app.listen(8080)
 
 module.exports = app;
