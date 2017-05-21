@@ -30,7 +30,7 @@
 
 </head>
 
-<body background="../images/login-bg.jpg">
+<body>
 
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
@@ -50,13 +50,13 @@
     <!-- /.container -->
 </nav>
 
-    <div class="container" >
-        <div id="form-wrapper">
+<div class="login-container">
+    <div id="form-wrapper">
             <form role="form" action="/login" method="POST">
                 <h1>Sign in</h1>
                 <p>and browse your matches</p>
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
+                    <input type="text" name="username" placeholder="Username">
+                    <input type="password" name="password" placeholder="Password">
                 <h3>
                     <input class ="submit" type="submit" value="Login">
                 </h3>
@@ -65,7 +65,7 @@
     </div>
 
 <!-- Footer -->
-<footerFixed>
+<footer>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -90,7 +90,7 @@
             </div>
         </div>
     </div>
-</footerFixed>
+</footer>
 
 <!-- jQuery -->
 <script src="javascripts/jquery.js"></script>
