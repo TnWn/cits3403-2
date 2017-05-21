@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var mongo = require('mongodb').MongoClient;
+//var mongo = require('mongodb').MongoClient;
 
 var index = require('./routes/index');
 var about = require('./routes/about');
@@ -13,14 +13,11 @@ var register = require('./routes/register');
 var user = require('./routes/user');
 var matches = require('./routes/matches');
 
+var mongoose = require('mongoose');
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
 
 var app = express();
-
-// MongoDB setup
-mongo.connect('mongodb://admin:password@ds143081.mlab.com:43081/cits3403-project', function(err, database) {
-    if(err) throw err
-    db = database
-})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -31,6 +28,13 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(require('express-session')({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
@@ -40,15 +44,15 @@ app.use('/register', register);
 app.use('/user', user);
 app.use('/matches', matches);
 
-// Add new user to MongoDB from the register page
-app.post('/register', function(req, res) {
-    db.collection('users').save(req.body, function(err) {
-        if(err) throw err
-        
-        console.log('saved to database')
-        res.redirect('/')
-    })
-})
+// passport config
+var Account = require('./models/account');
+passport.use(new LocalStrategy(Account.authenticate()));
+passport.serializeUser(Account.serializeUser());
+passport.deserializeUser(Account.deserializeUser());
+
+// mongoose
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://admin:password@ds143081.mlab.com:43081/cits3403-project');
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
