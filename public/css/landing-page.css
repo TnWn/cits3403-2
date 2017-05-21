@@ -31,7 +31,7 @@ h6 {
 }
 
 .intro-header {
-    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
@@ -171,7 +171,7 @@ footerFixed {
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 50px 0;
+    height: 100px;
     background-color: #f8f8f8;
 }
 
@@ -181,15 +181,12 @@ p.copyright {
 
 /* Form Formatting */
 div#form-wrapper {
-    position:absolute;
-    top:15%;
-    right:0;
-    left:0;
     text-align:center;
     width:400px;
     margin-right:auto;
     margin-left:auto;
     border:1px solid #000;
+    color: black;
     background-color: #fff;
     background-color: rgba(255,255,255,0.5);
     padding: 0px 10px 10px 10px;
@@ -235,4 +232,21 @@ input[type=password], select {
 
 .bodyBackgroundColor{
     background-color: #d9d9d9;
+}
+
+#formDiv{
+    padding: 100px;
+    padding: 100px;
+}
+
+.register-container {
+    padding: 100px;
+    background: url(../images/login-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.login-container {
+    padding: 270px;
+    background: url(../images/login-bg.jpg) no-repeat center center;
+    background-size: cover;
 }

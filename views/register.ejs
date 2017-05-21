@@ -30,7 +30,7 @@
 
 </head>
 
-<body background="../images/login-bg.jpg" >
+<body>
 
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
@@ -50,7 +50,7 @@
     <!-- /.container -->
 </nav>
 
-<div class="container">
+<div class="register-container">
     <div id="form-wrapper">
         <form role="form" action="/register" method="POST">
             <h1>Register</h1>
@@ -59,9 +59,9 @@
             <input type="text" name="username" placeholder="Username" required>
             <input type="text" name = "email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>
-    
+
             <h4>Enter Matching Data</h4>
-    
+
             How would you rate your energy levels out of 5?<br>
             1
             <input type="radio" id="Energy1" name="energy" value="1">
@@ -100,13 +100,13 @@
             <br><br>
             <input type="submit" value="Submit">
 
-    </form>
+        </form>
 
     </div>
 </div>
 
 <!-- Footer -->
-<footerFixed>
+<footer>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -131,7 +131,7 @@
             </div>
         </div>
     </div>
-</footerFixed>
+</footer>
 
 <!-- jQuery -->
 <script src="javascripts/jquery.js"></script>

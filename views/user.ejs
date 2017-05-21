@@ -61,19 +61,19 @@
     <!-- /.container -->
 </nav>
 
-
-<div class="container">
+<div class="register-container">
     <div id="form-wrapper">
-        <form method="POST">
-            <h1>Your Details</h1>
-            <input type="text" name="firstName" placeholder="First Name">
-            <input type="text" name="lastName" placeholder="Last Name" >
-            <input type="text" name = "email" placeholder="Email">
-            <input type="password" name="password" placeholder="Password">
+        <form role="form" action="/register" method="POST">
+            <h1>Register</h1>
+            <input type="text" name="firstName" placeholder="First Name" required>
+            <input type="text" name="lastName" placeholder="Last Name" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="text" name = "email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
 
             <h4>Enter Matching Data</h4>
 
-            Energy Level<br>
+            How would you rate your energy levels out of 5?<br>
             1
             <input type="radio" id="Energy1" name="energy" value="1">
             <input type="radio" id="Energy2" name="energy" value="2">
@@ -82,7 +82,7 @@
             <input type="radio" id="Energy5" name="energy" value="5">
             5
             <br>
-            Confidence Level<br>
+            How would you rate your confidence out of 5?<br>
             1
             <input type="radio" id="Confidence1" name="confidence" value="1">
             <input type="radio" id="Confidence2" name="confidence" value="2">
@@ -91,7 +91,7 @@
             <input type="radio" id="Confidence5" name="confidence" value="5">
             5
             <br>
-            Focus Level<br>
+            How would you rate your focus of of 5?<br>
             1
             <input type="radio" id="Focus1" name="focus" value="1">
             <input type="radio" id="Focus2" name="focus" value="2">
@@ -100,7 +100,7 @@
             <input type="radio" id="Focus5" name="focus" value="5">
             5
             <br>
-            Independence Level<br>
+            How would you rate your independence out of 5?<br>
             1
             <input type="radio" id="Independence1" name="independence" value="1">
             <input type="radio" id="Independence2" name="independence" value="2">
@@ -109,14 +109,15 @@
             <input type="radio" id="Independence5" name="independence" value="5">
             5
             <br><br>
-            <button id="">Update</button>
+            <input type="submit" value="Submit">
 
         </form>
 
     </div>
 </div>
+
 <!-- Footer -->
-<footerFixed>
+<footer>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -141,7 +142,7 @@
             </div>
         </div>
     </div>
-</footerFixed>
+</footer>
 
 <!-- jQuery -->
 <script src="javascripts/jquery.js"></script>
