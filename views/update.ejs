@@ -63,13 +63,15 @@
 
 <div class="register-container">
     <div id="form-wrapper">
-        <form>
-            <h1>User</h1>
-            <input type="text" name="firstName" placeholder= "First Name">
-            <input type="text" name="lastName" placeholder="Last Name">
-            <input type="text" name="username" placeholder="Username">
-            <input type="text" name = "email" placeholder="Email">
-            <input type="password" name="password" placeholder="Password">
+        <form role="form", action="/update", method="POST">
+        <input type="hidden" name="_method" value="PUT">
+            <h1>Update</h1>
+            <p>Leave fields you do not want updated blank</p>
+            <input type="text" name="firstName" placeholder="First Name: <%= user.firstName %>">
+            <input type="text" name="lastName" placeholder="Last Name: <%= user.lastName %>">
+            <input type="text" name="username" placeholder="Username: <%= user.username %>">
+            <input type="text" name = "email" placeholder="Email: <%= user.email %>">
+            <input type="password" name="password" placeholder="Update Password (doesn't work yet)">
 
             <h4>Enter Matching Data</h4>
 
