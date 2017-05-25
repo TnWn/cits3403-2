@@ -250,3 +250,9 @@ input[type=password], select {
     background: url(../images/login-bg.jpg) no-repeat center center;
     background-size: cover;
 }
+
+.user-container {
+    padding: 250px;
+    background: url(../images/login-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
