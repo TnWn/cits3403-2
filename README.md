@@ -1,4 +1,5 @@
 # Cits3403_Part2
+[![Build Status](https://travis-ci.org/TnWn/cits3403-2.svg?branch=master)](https://travis-ci.org/TnWn/cits3403-2)
 
 Currently deployed at: https://pet-match.herokuapp.com/
 
@@ -13,4 +14,3 @@ Currently deployed at: https://pet-match.herokuapp.com/
 ## Database ##
 
 The Mongo database is currently hosted at 'ds143081.mlab.com:43081/cits3403-project'
-
