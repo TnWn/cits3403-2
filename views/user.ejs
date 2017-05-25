@@ -62,56 +62,30 @@
 </nav>
 
 <div class="register-container">
-    <div id="form-wrapper">
-        <form>
-            <h1>User</h1>
-            <input type="text" name="firstName" placeholder= "First Name">
-            <input type="text" name="lastName" placeholder="Last Name">
-            <input type="text" name="username" placeholder="Username">
-            <input type="text" name = "email" placeholder="Email">
-            <input type="password" name="password" placeholder="Password">
+    <div class="form-wrapper">
+            <h1>User Details</h1>
+            <p> First Name: <%= user.firstName %>
+                <br>
+                Last Name: <%= user.lastName %>
+                <br>
+                Username: <%= user.username %>
+                <br>
+                Email: <%= user.email %>
+                <br>
+            </p>
 
-            <h4>Enter Matching Data</h4>
+            <h4>Matching Data</h4>
 
-            How would you rate your energy levels out of 5?<br>
-            1
-            <input type="radio" id="Energy1" name="energy" value="1">
-            <input type="radio" id="Energy2" name="energy" value="2">
-            <input type="radio" id="Energy3" name="energy" value="3">
-            <input type="radio" id="Energy4" name="energy" value="4">
-            <input type="radio" id="Energy5" name="energy" value="5">
-            5
-            <br>
-            How would you rate your confidence out of 5?<br>
-            1
-            <input type="radio" id="Confidence1" name="confidence" value="1">
-            <input type="radio" id="Confidence2" name="confidence" value="2">
-            <input type="radio" id="Confidence3" name="confidence" value="3">
-            <input type="radio" id="Confidence4" name="confidence" value="4">
-            <input type="radio" id="Confidence5" name="confidence" value="5">
-            5
-            <br>
-            How would you rate your focus of of 5?<br>
-            1
-            <input type="radio" id="Focus1" name="focus" value="1">
-            <input type="radio" id="Focus2" name="focus" value="2">
-            <input type="radio" id="Focus3" name="focus" value="3">
-            <input type="radio" id="Focus4" name="focus" value="4">
-            <input type="radio" id="Focus5" name="focus" value="5">
-            5
-            <br>
-            How would you rate your independence out of 5?<br>
-            1
-            <input type="radio" id="Independence1" name="independence" value="1">
-            <input type="radio" id="Independence2" name="independence" value="2">
-            <input type="radio" id="Independence3" name="independence" value="3">
-            <input type="radio" id="Independence4" name="independence" value="4">
-            <input type="radio" id="Independence5" name="independence" value="5">
-            5
-            <br><br>
-            <input type="submit" value="Submit">
-
-        </form>
+            <p> Energy: <%= user.energy %>
+                <br>
+                Confidence: <%= user.confidence %>
+                <br>
+                Focus: <%= user.focus %>
+                <br>
+                Independence: <%= user.independence %>
+            </p>
+            
+            <a href="../update" class="btn btn-default btn-lg"><span class="network-name">Update details</span></a>
 
     </div>
 </div>
@@ -128,14 +102,6 @@
                     <li class="footer-menu-divider">&sdot;</li>
                     <li>
                         <a href="/about">About</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="/login">Login</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="/register">Register</a>
                     </li>
                 </ul>
                 <p class="copyright text-muted small">Copyright &copy; University of Western Australia 2017. All Rights Reserved</p>

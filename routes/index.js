@@ -44,6 +44,10 @@ router.get('/logout', function(req, res) {
     res.redirect('/');
 });
 
+router.get('/user', function(req, res) {
+    res.render('user', { user : req.user });
+});
+
 router.get('/update/:id', function(req, res) {
     res.render('update', { user: req.user });
 });
