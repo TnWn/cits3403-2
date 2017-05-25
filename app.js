@@ -54,6 +54,7 @@ passport.deserializeUser(Account.deserializeUser());
 
 // mongoose
 mongoose.Promise = global.Promise;
+mongoose.set('debug', true);
 mongoose.connect('mongodb://admin:password@ds143081.mlab.com:43081/cits3403-project');
 //mongoose.connect('mongodb://admin:password@ds143081.mlab.com:43081/21503781');
 

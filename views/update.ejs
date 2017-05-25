@@ -66,6 +66,7 @@
         <form role="form", action="/update/<%= user._id %>", method="POST">
             <h1>Update</h1>
             <p>Leave fields you do not want updated blank</p>
+            <p>Note: Updating username or password will require you to login again</p>
             <input type="text" name="firstName" placeholder="First Name: <%= user.firstName %>">
             <input type="text" name="lastName" placeholder="Last Name: <%= user.lastName %>">
             <input type="text" name="username" placeholder="Username: <%= user.username %>">

@@ -54,10 +54,18 @@ router.get('/update/:id', function(req, res) {
 });
 
 router.post('/update/:id', function(req, res) {
-    Account.findOne({_id: req.session.passport.user.id}, {
-        username: req.body.username
-    }, function(err) {
-        if(err) console.log(err);
+    Account.update({_id: req.user._id}, { firstName: req.body.firstName || req.user.firstName, 
+                                          lastName: req.body.lastName || req.user.lastName,
+                                          username: req.body.username || req.user.username,
+                                          email: req.body.email || req.user.email,
+                                          // password here
+                                          energy: req.body.energy || req.user.energy,
+                                          confidence: req.body.confidence || req.user.confidence,
+                                          focus: req.body.focus || req.user.focus,
+                                          independence: req.body.independence || req.user.independence }, function(err, account) {
+        if(err) {
+            return handleError(err);
+        }
         res.redirect('/');
     });
 });
