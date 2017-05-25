@@ -12,6 +12,7 @@ var login = require('./routes/login');
 var register = require('./routes/register');
 var user = require('./routes/user');
 var matches = require('./routes/matches');
+var update = require('./routes/update');
 
 var mongoose = require('mongoose');
 var passport = require('passport');
@@ -43,6 +44,7 @@ app.use('/login', login);
 app.use('/register', register);
 app.use('/user', user);
 app.use('/matches', matches);
+app.use('/update', update);
 
 // passport config
 var Account = require('./models/account');

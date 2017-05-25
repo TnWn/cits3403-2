@@ -63,8 +63,7 @@
 
 <div class="register-container">
     <div id="form-wrapper">
-        <form role="form", action="/update", method="POST">
-        <input type="hidden" name="_method" value="PUT">
+        <form role="form", action="/update/<%= user._id %>", method="POST">
             <h1>Update</h1>
             <p>Leave fields you do not want updated blank</p>
             <input type="text" name="firstName" placeholder="First Name: <%= user.firstName %>">

@@ -44,36 +44,19 @@ router.get('/logout', function(req, res) {
     res.redirect('/');
 });
 
-router.get('/update', function(req, res) {
+router.get('/update/:id', function(req, res) {
     res.render('update', { user: req.user });
 });
 
-router.put('/update', function(req, res) {
-    Account.findById(req.params.id, function (err, account) {
-        if(!account) { console.log("cannot find account"); }
-        if(err) {
-            res.status(500).send(err);
-        } else {
-            account.firstName = req.body.firstName || account.firstName;
-            account.lastName = req.body.lastName || account.lastName;
-            account.username = req.body.username || account.username;
-            account.email = req.body.email || account.email;
-            account.energy = req.body.energy || account.energy;
-            account.confidence = req.body.confidence || account.confidence;
-            account.focus = req.body.focus || account.focus;
-            account.independence = req.body.independence || account.independence;
-
-            account.save(function (err, account) {
-                if(err) {
-                    res.status(500).send(err);
-                }
-                res.send(account);
-            });
-        }
+router.post('/update/:id', function(req, res) {
+    Account.findOne({_id: req.session.passport.user.id}, {
+        username: req.body.username
+    }, function(err) {
+        if(err) console.log(err);
+        res.redirect('/');
     });
 });
-        
-
+                    
 router.get('/ping', function(req, res) {
     res.status(200).send("pong!");
 });
