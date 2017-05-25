@@ -256,3 +256,19 @@ input[type=password], select {
     background: url(../images/login-bg.jpg) no-repeat center center;
     background-size: cover;
 }
+
+.matches-container {
+    padding: 80px;
+    background-size: cover;
+}
+
+.dogImg {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 200px;
+}
+
+.dogImg:hover {
+    box-shadow: 0px 0px 2px 1px #3399ff;
+}

@@ -55,6 +55,7 @@ passport.deserializeUser(Account.deserializeUser());
 // mongoose
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://admin:password@ds143081.mlab.com:43081/cits3403-project');
+//mongoose.connect('mongodb://admin:password@ds143081.mlab.com:43081/21503781');
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -73,5 +74,32 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+/* MANUALLY ADD DOGS to mongodb
+var Dog = require('./models/dog');
+var small = new Dog({
+    name: 'bob',
+    breed: 'bob',
+    gender: 1, // (1) male, (0) female
+    age: 1,
+    size: 'bob',
+    vaccination: 1,
+    desex: 1,
+    deworm: 1,
+    heartworm: 1,
+    location: 'bob',
+    Phone: 'bob',
+    email: 'bob',
+    password: 'bob',
+    energy: 1,
+    confidence: 1,
+    focus: 1,
+    independence: 1,
+});
+small.save(function (err) {
+    if (err) return handleError(err);
+    console.log('SAVED');
+})
+*/
 
 module.exports = app;

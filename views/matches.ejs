@@ -60,6 +60,30 @@
     <!-- /.container -->
 </nav>
 
+<div class="matches-container">
+    <% for(var i=0; i<dog.length; i++) {%>
+    <% if((user.energy - dog[i].energy >= -1) && (user.energy - dog[i].energy <= 1) &&
+    (user.confidence - dog[i].confidence >= -1) && (user.confidence - dog[i].confidence <= 1) &&
+    (user.focus - dog[i].focus >= -1) && (user.focus - dog[i].focus <= 1) &&
+    (user.independence + dog[i].independence >= 5) && (user.independence + dog[i].independence <= 7)) { %>
+    <div class="col-md2 col-lg-2 text-center">
+        <a href="/matches/<%- dog[i].id %>">
+            <img class = "dogImg" alt="<%- dog[i].id %>" src="/images/dogs/<%- dog[i].id %>.png" >
+            <div class="mt4" >
+                <p><%- dog[i].name %></p>
+                <!--  temp -->
+                <span><%- dog[i].energy %></span>
+                <span><%- dog[i].confidence %></span>
+                <span><%- dog[i].focus %></span>
+                <span><%- dog[i].independence %></span>
+            </div>
+        </a>
+    </div>
+    <% } %>
+    <% } %>
+</div>
+
+
 <!-- Footer -->
 <footerFixed>
     <div class="container">
