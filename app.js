@@ -75,10 +75,10 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-/* MANUALLY ADD DOGS to mongodb
+/* MANUALLY ADD DOGS
 var Dog = require('./models/dog');
 var small = new Dog({
-    name: 'bob',
+    name: 'testdog4',
     breed: 'bob',
     gender: 1, // (1) male, (0) female
     age: 1,
@@ -91,10 +91,10 @@ var small = new Dog({
     Phone: 'bob',
     email: 'bob',
     password: 'bob',
-    energy: 1,
-    confidence: 1,
-    focus: 1,
-    independence: 1,
+    energy: 4,
+    confidence: 4,
+    focus: 4,
+    independence: 4,
 });
 small.save(function (err) {
     if (err) return handleError(err);
