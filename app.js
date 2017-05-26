@@ -14,6 +14,17 @@ var user = require('./routes/user');
 var matches = require('./routes/matches');
 var update = require('./routes/update');
 var dog1 = require('./routes/5927b9dd9321749530da4658');
+var dog2 = require('./routes/5927cdb446d8f07c903c8c38');
+var dog3 = require('./routes/5927d09a62baeb9cf83f9ffe');
+var dog4 = require('./routes/5927d1ef688552ae648665ec');
+var dog5 = require('./routes/5927d3d54f0f6a7610ebdb87');
+var dog6 = require('./routes/5927d418a0f8159e24807502');
+var dog7 = require('./routes/5927d46af64644aeac5d2b3f');
+var dog8 = require('./routes/5927d4c7ac7181a718902d8d');
+var dog9 = require('./routes/5927d521f6ba43ae9079719e');
+var dog10 = require('./routes/5927d558a48c8a27acf16467');
+var dog11 = require('./routes/5927d59e593185accc037b2f');
+
 
 var changepass = require('./routes/changepass');
 
@@ -49,6 +60,17 @@ app.use('/user', user);
 app.use('/matches', matches);
 app.use('/update', update);
 app.use('/dogs/5927b9dd9321749530da4658', dog1);
+app.use('/dogs/5927cdb446d8f07c903c8c38', dog2);
+app.use('/dogs/5927d09a62baeb9cf83f9ffe', dog3);
+app.use('/dogs/5927d1ef688552ae648665ec', dog4);
+app.use('/dogs/5927d3d54f0f6a7610ebdb87', dog5);
+app.use('/dogs/5927d418a0f8159e24807502', dog6);
+app.use('/dogs/5927d46af64644aeac5d2b3f', dog7);
+app.use('/dogs/5927d4c7ac7181a718902d8d', dog8);
+app.use('/dogs/5927d521f6ba43ae9079719e', dog9);
+app.use('/dogs/5927d558a48c8a27acf16467', dog10);
+app.use('/dogs/5927d59e593185accc037b2f', dog11);
+
 
 app.use('/changepass', changepass);
 
@@ -81,29 +103,29 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-/*
+/* manual function to add a dog to the db
 var Dog = require('./models/dog');
-var small = new Dog({
-    name: 'Benson',
-    breed: 'Retriver / Husky',
-    gender: 1, // (1) male, (0) female
-    age: 5, //years
-    size: 'Medium',    //small, medium, large
-    vaccination: 1, //boolean true false
-    desex: 1,
-    deworm: 1,
-    heartworm: 1,
-    location: '108 Malaga Drive (Cnr Reid Hwy) MALAGA 6090',
-    Phone: '(08) 9209 9300',
-    email: 'Malagaanimalcare@rspca.org.au',
-    energy: 2,
-    confidence: 2,
-    focus: 2,
-    independence: 2,
+var addDog = new Dog({
+    name: '',
+    breed: '',
+    gender: , // (1) male, (0) female
+    age: , //years
+    size: '',    //small, medium, large
+    vaccination: , //boolean true false
+    desex: ,
+    deworm: ,
+    heartworm: ,
+    location: '',
+    Phone: '',
+    email: '',
+    energy: ,
+    confidence: ,
+    focus: ,
+    independence: ,
 });
-small.save(function (err) {
+addDog.save(function (err) {
     if (err) return handleError(err);
-    console.log('SAVED');
+    console.log('Added new dog');
 })
 */
 

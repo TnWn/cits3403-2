@@ -5,9 +5,9 @@ var test;
 
 /* GET home page. */
 router.get('/', function(req, res) {
-    Dog.find( {'_id' : '5927b9dd9321749530da4658'}, function(err, docs){
+    Dog.find( {'_id' : '5927d521f6ba43ae9079719e'}, function(err, docs){
         console.log(docs);
-        res.render('dogs/5927b9dd9321749530da4658', {dog: docs, user : req.user })
+        res.render('dogs/5927d521f6ba43ae9079719e', {dog: docs, user : req.user })
     });
 });
 
