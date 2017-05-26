@@ -54,6 +54,9 @@
     <div id="form-wrapper">
         <form role="form" action="/register" method="POST">
             <h1>Register</h1>
+            <%if (msg) { %>
+                <p><%= msg %></p>
+            <% } %>
             <input type="text" name="firstName" placeholder="First Name" required>
             <input type="text" name="lastName" placeholder="Last Name" required>
             <input type="text" name="username" placeholder="Username" required>

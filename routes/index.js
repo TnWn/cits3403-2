@@ -10,7 +10,7 @@ router.get('/', function(req, res) {
 });
 
 router.get('/register', function(req, res) {
-    res.render('register', { });
+    res.render('register', { msg: null});
 });
 
 router.post('/register', function(req, res) {
@@ -23,7 +23,8 @@ router.post('/register', function(req, res) {
                                    focus : req.body.focus,
                                    independence : req.body.independence }), req.body.password, function(err, account) {
         if(err) {
-            return res.render('register', { account : account });
+            console.log(err);
+            return res.render('register', { account : account, msg: 'Validation Error: Please check your email address and try again.'});
         }
 
         passport.authenticate('local')(req, res, function () {
@@ -50,7 +51,7 @@ router.get('/user', function(req, res) {
 });
 
 router.get('/update/:id', function(req, res) {
-    res.render('update', { user: req.user });
+    res.render('update', { user: req.user});
 });
 
 router.post('/update/:id', function(req, res) {
@@ -64,20 +65,21 @@ router.post('/update/:id', function(req, res) {
                                           independence: req.body.independence || req.user.independence }, { runValidators: true }, function(err, account) {
         if(err) {
             console.log(err);
+            return res.status(500).send('Email address not valid. Please go back and enter a valid email address.');
         }
         res.redirect('/');
     });
 });
 
 router.get('/changepass/:username', function(req, res) {
-    res.render('changepass', { user: req.user });
+    res.render('changepass', { user: req.user, msg: null });
 });
 
 router.post('/changepass/:username', function(req, res) {
     Account.findByUsername(req.user.username).then(function(sanitizedUser) {
         if(sanitizedUser){
             if(req.body.password != req.body.confirmpassword) {
-                res.status(500).json({message: 'Passwords do not match!'});
+                res.status(500).send('Passwords do not match. Please go back and try again.');
             } else {
             sanitizedUser.setPassword(req.body.password, function(){
                 sanitizedUser.save();
