@@ -8,7 +8,7 @@ var Account = new Schema({
     lastName: { type: String, required: true},
     username: {type: String, unique : true, required: true},
     email: {type: String, unique : true, required: true, validate: validators.isEmail()},
-    password: { type: String, required: true},
+    password: String,
     energy: { type: Number, required: true},
     confidence: { type: Number, required: true},
     focus: { type: Number, required: true},

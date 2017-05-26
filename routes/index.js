@@ -24,7 +24,7 @@ router.post('/register', function(req, res) {
                                    independence : req.body.independence }), req.body.password, function(err, account) {
         if(err) {
             console.log(err);
-            return res.render('register', { account : account, msg: 'Validation Error: Please check your email address and try again.'});
+            return res.status(500).send('Validation Error. Please check your email address is correct. You may not have more than one account per email address');
         }
 
         passport.authenticate('local')(req, res, function () {
