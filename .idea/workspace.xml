@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5eb4e495-5aa4-4469-93c5-4c2602ec404b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/npm-debug.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/dogs/5926ce331dcc93563c2a5fb2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/dogs/5926d75befe9376fd878e752.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/changepass.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/changepass.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/landing-page.css" afterPath="$PROJECT_DIR$/public/css/landing-page.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/matches.js" afterPath="$PROJECT_DIR$/routes/matches.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/matches.ejs" afterPath="$PROJECT_DIR$/views/matches.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/update.ejs" afterPath="$PROJECT_DIR$/views/update.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user.ejs" afterPath="$PROJECT_DIR$/views/user.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="48" column="48" lean-forward="false" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
+            <state relative-caret-position="336">
+              <caret line="74" column="43" lean-forward="false" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -54,7 +52,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="5927b9dd9321749530da4658.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="5927b9dd9321749530da4658.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/dogs/5927b9dd9321749530da4658.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="299">
@@ -86,7 +84,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>separato</find>
       <find>h2</find>
       <find>text-a</find>
       <find>text-al</find>
@@ -116,6 +113,7 @@
       <find>h1</find>
       <find>note</find>
       <find>conta</find>
+      <find>debug</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -139,12 +137,12 @@
         <option value="$PROJECT_DIR$/views/user.ejs" />
         <option value="$PROJECT_DIR$/views/about.ejs" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routes/matches.js" />
         <option value="$PROJECT_DIR$/routes/5927b9dd9321749530da4658.js" />
         <option value="$PROJECT_DIR$/views/matches.ejs" />
         <option value="$PROJECT_DIR$/public/css/landing-page.css" />
         <option value="$PROJECT_DIR$/views/dogs/5927b9dd9321749530da4658.ejs" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -438,12 +436,12 @@
       <workItem from="1495260992842" duration="3903000" />
       <workItem from="1495364799871" duration="10290000" />
       <workItem from="1495701044957" duration="13493000" />
-      <workItem from="1495774562859" duration="5490000" />
+      <workItem from="1495774562859" duration="5676000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49163000" />
+    <option name="totallyTimeSpent" value="49349000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1092" extended-state="0" />
@@ -826,14 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="48" column="48" lean-forward="false" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/5927b9dd9321749530da4658.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -854,6 +844,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="67" column="87" lean-forward="false" selection-start-line="67" selection-start-column="87" selection-end-line="67" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="74" column="43" lean-forward="false" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="43" />
           <folding />
         </state>
       </provider>

@@ -15,6 +15,8 @@ var matches = require('./routes/matches');
 var update = require('./routes/update');
 var dog1 = require('./routes/5927b9dd9321749530da4658');
 
+var changepass = require('./routes/changepass');
+
 var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
@@ -48,6 +50,8 @@ app.use('/matches', matches);
 app.use('/update', update);
 app.use('/dogs/5927b9dd9321749530da4658', dog1);
 
+app.use('/changepass', changepass);
+
 // passport config
 var Account = require('./models/account');
 passport.use(new LocalStrategy(Account.authenticate()));
@@ -56,7 +60,6 @@ passport.deserializeUser(Account.deserializeUser());
 
 // mongoose
 mongoose.Promise = global.Promise;
-mongoose.set('debug', true);
 mongoose.connect('mongodb://admin:password@ds143081.mlab.com:43081/cits3403-project');
 //mongoose.connect('mongodb://admin:password@ds143081.mlab.com:43081/21503781');
 
