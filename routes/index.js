@@ -76,10 +76,13 @@ router.get('/changepass/:username', function(req, res) {
 router.post('/changepass/:username', function(req, res) {
     Account.findByUsername(req.user.username).then(function(sanitizedUser) {
         if(sanitizedUser){
+            if(req.body.password != req.body.confirmpassword) {
+                res.status(500).json({message: 'Passwords do not match!'});
+            } else {
             sanitizedUser.setPassword(req.body.password, function(){
                 sanitizedUser.save();
                 res.redirect('/');
-            });
+            }); }
         } else {
             res.status(500).json({message: 'This user does not exist'});
         }
