@@ -58,7 +58,6 @@ router.post('/update/:id', function(req, res) {
                                           lastName: req.body.lastName || req.user.lastName,
                                           username: req.body.username || req.user.username,
                                           email: req.body.email || req.user.email,
-                                          // password here
                                           energy: req.body.energy || req.user.energy,
                                           confidence: req.body.confidence || req.user.confidence,
                                           focus: req.body.focus || req.user.focus,
@@ -67,6 +66,25 @@ router.post('/update/:id', function(req, res) {
             return handleError(err);
         }
         res.redirect('/');
+    });
+});
+
+router.get('/changepass/:username', function(req, res) {
+    res.render('changepass', { user: req.user });
+});
+
+router.post('/changepass/:username', function(req, res) {
+    Account.findByUsername(req.user.username).then(function(sanitizedUser) {
+        if(sanitizedUser){
+            sanitizedUser.setPassword(req.body.password, function(){
+                sanitizedUser.save();
+                res.redirect('/');
+            });
+        } else {
+            res.status(500).json({message: 'This user does not exist'});
+        }
+    },function(err) {
+        console.error(err);
     });
 });
                     

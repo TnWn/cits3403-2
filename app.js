@@ -13,6 +13,7 @@ var register = require('./routes/register');
 var user = require('./routes/user');
 var matches = require('./routes/matches');
 var update = require('./routes/update');
+var changepass = require('./routes/changepass');
 
 var mongoose = require('mongoose');
 var passport = require('passport');
@@ -45,6 +46,7 @@ app.use('/register', register);
 app.use('/user', user);
 app.use('/matches', matches);
 app.use('/update', update);
+app.use('/changepass', changepass);
 
 // passport config
 var Account = require('./models/account');
@@ -54,7 +56,6 @@ passport.deserializeUser(Account.deserializeUser());
 
 // mongoose
 mongoose.Promise = global.Promise;
-mongoose.set('debug', true);
 mongoose.connect('mongodb://admin:password@ds143081.mlab.com:43081/cits3403-project');
 //mongoose.connect('mongodb://admin:password@ds143081.mlab.com:43081/21503781');
 
