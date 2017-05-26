@@ -61,9 +61,9 @@ router.post('/update/:id', function(req, res) {
                                           energy: req.body.energy || req.user.energy,
                                           confidence: req.body.confidence || req.user.confidence,
                                           focus: req.body.focus || req.user.focus,
-                                          independence: req.body.independence || req.user.independence }, function(err, account) {
+                                          independence: req.body.independence || req.user.independence }, { runValidators: true }, function(err, account) {
         if(err) {
-            return handleError(err);
+            console.log(err);
         }
         res.redirect('/');
     });
