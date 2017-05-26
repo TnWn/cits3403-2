@@ -10,7 +10,7 @@ router.get('/', function(req, res) {
 });
 
 router.get('/register', function(req, res) {
-    res.render('register', { msg: null});
+    res.render('register');
 });
 
 router.post('/register', function(req, res) {
