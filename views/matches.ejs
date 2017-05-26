@@ -61,20 +61,27 @@
 </nav>
 
 <div class="matches-container">
+    <% var matches = 0 %>
     <% for(var i=0; i<dog.length; i++) {%>
     <% if((user.energy - dog[i].energy >= -1) && (user.energy - dog[i].energy <= 1) &&
     (user.confidence - dog[i].confidence >= -1) && (user.confidence - dog[i].confidence <= 1) &&
     (user.focus - dog[i].focus >= -1) && (user.focus - dog[i].focus <= 1) &&
     (user.independence + dog[i].independence >= 5) && (user.independence + dog[i].independence <= 7)) { %>
+    <% matches += 1 %>
     <div class="col-md2 col-lg-2 text-center">
         <a href="/dogs/<%- dog[i].id %>">
-            <img class = "dogImg" alt="<%- dog[i].id %>" src="/images/dogs/<%- dog[i].id %>.jpg" >
+            <img class = "dogImg" alt="<%- dog[i].id %>" src="/images/dogs/<%- dog[i].id %>.jpg">
             <div class="mt4" >
                 <p><%- dog[i].name %></p>
             </div>
         </a>
     </div>
     <% } %>
+    <% } %>
+    <% if(matches == 0) { %>
+    <div class="col-md6 col-lg-6 text-center">
+        <h1> Sorry! No matches were found</h1>
+    </div>
     <% } %>
 </div>
 

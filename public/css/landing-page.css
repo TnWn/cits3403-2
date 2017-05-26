@@ -240,41 +240,53 @@ input[type=password], select {
 }
 
 .register-container {
-    padding: 100px;
+    padding: 6%;
     background: url(../images/login-bg.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .login-container {
-    padding: 270px;
+    padding: 14%;
     background: url(../images/login-bg.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .user-container {
-    padding: 250px;
+    padding: 11%;
     background: url(../images/login-bg.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .matches-container {
-    padding: 80px;
-    background-size: cover;
+    padding-top: 4%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 40%;
 }
 
 .dog-container {
-    padding-top: 50px;
-    padding-left: 200px;
-    padding-right: 200px;
-    background-size: cover;
+    padding-top: 1%;
+    padding-bottom: 40%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .dogImg {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
-    width: 200px;
+    height: 100%;
+    width: 100%;
 }
+
+.largeDogImg {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    height: 80%;
+    width: 80%;
+}
+
 
 .dogImg:hover {
     box-shadow: 0px 0px 2px 1px #3399ff;
