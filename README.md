@@ -9,8 +9,8 @@ Currently deployed at: https://pet-match.herokuapp.com/
 ## Installation ##
 
  1. Download the repo
- 2. Navigate to that directory
- 3. Install dependencies `npm install`
+ 2. Navigate to the directory where you have downloaded the repo
+ 3. Install dependencies with `npm install`
  4. Run `npm start`
  5. Access locally at 'http://localhost:3000/'
  
